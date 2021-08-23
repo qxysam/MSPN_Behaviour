@@ -92,8 +92,4 @@ the ***gpu_num*** is the number of gpus, and ***iter_num*** is the iteration num
 
 Summary:
           1、Falling is not easy to detect because the occurrence interval is very short. If you can detect every frame, it should be no problem. However, due to performance problems, We can't do it at present, but fortunately, falling will hardly happen.
-          
           2、The transformation using the model optimization tensorrt method is unsuccessful. There are too many problems, incompatibilities and errors. If the second network is SVM method, it can not be optimized by deep learning method.
-
-
-
