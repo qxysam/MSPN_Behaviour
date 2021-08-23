@@ -79,13 +79,20 @@ the ***gpu_num*** is the number of gpus, and ***iter_num*** is the iteration num
 
 ### Procedures AND Problems
 1、Here, y = {0,1,2,3,4,5,6,7,8} is used to represent human behavior: 9 states: sleeping, walking, running, jumping, squatting, falling, sitting down, conflict, smoking (smoking and diet are very close, predicting smoking alone takes too much time, so they are combined);
+
 2、Labeling the behavior corresponding to joint_points will add a behavior label to each human body on the coco data set;
+
 3、Frame detection is carried out for real-time video. In case of sleeping, falling, conflict and smoking, an alarm will be given;
+
 4、In addition to joint point detection, a new SVM network (MLP is also feasible, three layers, input, hidden and output) will be built as a multi classification network as a behavior judgment network;
+
 5、In order to improve the generalization ability of the model, the data of 1-3 joint_points will be 0 randomly, and the joint points that are not predicted will also be replaced with 0 then the changed data will be added to the dataset;
+
 6、In actual operation, it will not be detected every frame, and the performance cannot keep up. It is predicted once per second or every 2 seconds.
+
 Summary:
           1、Falling is not easy to detect because the occurrence interval is very short. If you can detect every frame, it should be no problem. However, due to performance problems, We can't do it at present, but fortunately, falling will hardly happen.
+          
           2、The transformation using the model optimization tensorrt method is unsuccessful. There are too many problems, incompatibilities and errors. If the second network is SVM method, it can not be optimized by deep learning method.
 
 
