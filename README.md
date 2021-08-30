@@ -80,7 +80,7 @@ the ***gpu_num*** is the number of gpus, and ***iter_num*** is the iteration num
 ### Procedures AND Problems
 1、Here, y = {0,1,2,3,4,5,6,7,8} is used to represent human behavior: 9 states: sleeping, walking, running, jumping, squatting, falling, sitting down, conflict, smoking (smoking and diet are very close, predicting smoking alone takes too much time, so they are combined);
 
-2、Labeling the behavior corresponding to joint_points will add a behavior label to each human body on the coco data set;
+2、Labeling the behavior corresponding to joint_points will add a behavior label to each human body on the ourcoco data set;
 
 3、Frame detection is carried out for real-time video. In case of sleeping, falling, conflict and smoking, an alarm will be given;
 
